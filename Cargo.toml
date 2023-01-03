@@ -1,0 +1,11 @@
+[workspace]
+
+members = [
+    "api",
+    "protosr",
+]
+
+default-members  = [
+    "api",
+    "protosr",
+]

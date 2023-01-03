@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package = "/;toi";
+
+package toi;
+
+message IotDataMessage {
+    int64 time = 1;
+}
+

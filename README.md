@@ -1,2 +1,3 @@
-# things.over.internet
-Things Over Internet (ToI) platform
+# Things Over Internet
+
+  Things Over Internet Monorepo
