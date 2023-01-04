@@ -7,5 +7,5 @@
 - v1
 
 <p align="center">
-  <a href="https://github.com/tointernet/things.over.internet/tree/main/.docs/toi.drawio" target="blank"><img src="./.docs/platform-v1.png" alt="Platform" /></a>
+  <a href="https://github.com/tointernet/things.over.internet/tree/main/.docs" target="blank"><img src="./.docs/platform-v1.png" alt="Platform" /></a>
 </p>
