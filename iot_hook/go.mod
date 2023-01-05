@@ -1,3 +1,3 @@
-module github.com/things.over.internet/iot_hook
+module github.com/things.over.internet/iot.hook
 
 go 1.19
