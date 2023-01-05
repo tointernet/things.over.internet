@@ -3,5 +3,13 @@
 version = 3
 
 [[package]]
-name = "bridge"
+name = "app"
+version = "0.1.0"
+
+[[package]]
+name = "infra"
+version = "0.1.0"
+
+[[package]]
+name = "zsubscriber"
 version = "0.1.0"
