@@ -3,5 +3,13 @@
 version = 3
 
 [[package]]
-name = "api"
+name = "app"
+version = "0.1.0"
+
+[[package]]
+name = "infra"
+version = "0.1.0"
+
+[[package]]
+name = "zhttp"
 version = "0.1.0"
