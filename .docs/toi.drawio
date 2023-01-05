@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="7XnDflL5jBeqPy--ubXq" name="v1">
-        <mxGraphModel dx="2478" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="2580" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -16,7 +16,7 @@
                 <mxCell id="65" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="64" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="67" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="66">
+                <mxCell id="67" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="2" target="66" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="2" value="API&lt;br&gt;&lt;br&gt;HTTP REST API" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -64,10 +64,10 @@
                 <mxCell id="50" style="edgeStyle=none;html=1;entryX=-0.067;entryY=0.182;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;" parent="1" source="8" target="49" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="69" style="edgeStyle=none;html=1;" edge="1" parent="1" source="8" target="68">
+                <mxCell id="69" style="edgeStyle=none;html=1;" parent="1" source="8" target="68" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value="thing manager grpc" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="8" value="things manager grpc" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="-550" y="595" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="51" style="edgeStyle=none;html=1;entryX=0;entryY=0.527;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;" parent="1" source="10" target="49" edge="1">
@@ -88,10 +88,10 @@
                 <mxCell id="58" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;" parent="1" source="14" target="55" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="72" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="14" target="71">
+                <mxCell id="72" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="14" target="71" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" value="thing manager consumer" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="14" value="things manager consumer" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="536" y="475" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="57" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;" parent="1" source="16" target="55" edge="1">
@@ -190,13 +190,13 @@
                 <mxCell id="64" value="Auth0" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#6700F7;fontColor=#ffffff;strokeColor=#3700CC;" parent="1" vertex="1">
                     <mxGeometry x="-725" y="845" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="66" value="AWS &lt;br&gt;Elastic Cache" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#6700F7;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+                <mxCell id="66" value="AWS &lt;br&gt;Elastic Cache" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#6700F7;fontColor=#ffffff;strokeColor=#3700CC;" parent="1" vertex="1">
                     <mxGeometry x="-725" y="535" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="68" value="AWS &lt;br&gt;Secrets Manager" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#6700F7;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+                <mxCell id="68" value="AWS &lt;br&gt;Secrets Manager" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#6700F7;fontColor=#ffffff;strokeColor=#3700CC;" parent="1" vertex="1">
                     <mxGeometry x="-550" y="465" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="71" value="AWS &lt;br&gt;Secrets Manager" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#6700F7;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+                <mxCell id="71" value="AWS &lt;br&gt;Secrets Manager" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#6700F7;fontColor=#ffffff;strokeColor=#3700CC;" parent="1" vertex="1">
                     <mxGeometry x="726" y="380" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>
