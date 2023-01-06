@@ -7,13 +7,13 @@ name = "app"
 version = "0.1.0"
 
 [[package]]
+name = "consumers"
+version = "0.1.0"
+
+[[package]]
+name = "grpc"
+version = "0.1.0"
+
+[[package]]
 name = "infra"
-version = "0.1.0"
-
-[[package]]
-name = "zconsumer"
-version = "0.1.0"
-
-[[package]]
-name = "zgrpc"
 version = "0.1.0"

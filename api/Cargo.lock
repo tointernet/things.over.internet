@@ -7,9 +7,9 @@ name = "app"
 version = "0.1.0"
 
 [[package]]
-name = "infra"
+name = "http"
 version = "0.1.0"
 
 [[package]]
-name = "zhttp"
+name = "infra"
 version = "0.1.0"

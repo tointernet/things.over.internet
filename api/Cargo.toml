@@ -3,11 +3,11 @@
 members = [
   "app",
   "infra",
-  "zhttp",
+  "bins/http",
 ]
 
 default-members  = [
   "app",
   "infra",
-  "zhttp",
+  "bins/http",
 ]

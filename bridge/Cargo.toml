@@ -3,11 +3,11 @@
 members = [
   "app",
   "infra",
-  "zsubscriber",
+  "bins/subscriber",
 ]
 
 default-members  = [
   "app",
   "infra",
-  "zsubscriber",
+  "bins/subscriber",
 ]

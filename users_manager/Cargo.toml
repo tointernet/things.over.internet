@@ -3,13 +3,13 @@
 members = [
   "app",
   "infra",
-  "zgrpc",
-  "zconsumer",
+  "bins/consumers",
+  "bins/grpc",
 ]
 
 default-members  = [
   "app",
   "infra",
-  "zgrpc",
-  "zconsumer",
+  "bins/consumers",
+  "bins/grpc",
 ]

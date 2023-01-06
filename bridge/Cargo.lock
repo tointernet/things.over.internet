@@ -11,5 +11,5 @@ name = "infra"
 version = "0.1.0"
 
 [[package]]
-name = "zsubscriber"
+name = "subscriber"
 version = "0.1.0"

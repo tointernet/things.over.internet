@@ -7,9 +7,9 @@ name = "app"
 version = "0.1.0"
 
 [[package]]
-name = "infra"
+name = "consumers"
 version = "0.1.0"
 
 [[package]]
-name = "zconsumer"
+name = "infra"
 version = "0.1.0"
