@@ -1,6 +1,6 @@
 fn main() {
-    let models = "../zprotofiles/ex_models.proto";
-    let services = "../zprotofiles/ex_services.proto";
+    let models = "../protofiles/ex_models.proto";
+    let services = "../protofiles/ex_services.proto";
 
     tonic_build::configure()
         .build_server(true)

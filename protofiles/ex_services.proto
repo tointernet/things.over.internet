@@ -4,7 +4,7 @@ option go_package = "/;toi";
 
 package toi;
 
-import "zprotofiles/ex_models.proto";
+import "protofiles/ex_models.proto";
 
 message GetIotDataRequest {
     string name = 1;
