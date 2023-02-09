@@ -4,13 +4,10 @@ use httpw::server::RouteConfig;
 
 pub fn things_routes() -> RouteConfig {
     |cfg: &mut ServiceConfig| {
-        // let mw = cfg.app_data(ext);
-        // cfg.service(
-        //     web::resource("/v1/things")
-        //         .wrap(mw)
-        //         .route(web::post().to(things::post)),
-        // );
-
-        cfg.service(web::resource("/v1/things").route(web::post().to(things::post)));
+        cfg.service(
+            web::resource("/v1/things")
+                .route(web::post().to(things::post))
+                .route(web::get().to(things::get)),
+        );
     }
 }
