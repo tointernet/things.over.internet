@@ -1,9 +1,16 @@
 use crate::controllers::things;
 use actix_web::web::{self, ServiceConfig};
-use httpw::server::AppConfig;
+use httpw::server::RouteConfig;
 
-pub fn things_routes() -> AppConfig {
+pub fn things_routes() -> RouteConfig {
     |cfg: &mut ServiceConfig| {
-        cfg.route("/v1/things", web::post().to(things::post));
+        // let mw = cfg.app_data(ext);
+        // cfg.service(
+        //     web::resource("/v1/things")
+        //         .wrap(mw)
+        //         .route(web::post().to(things::post)),
+        // );
+
+        cfg.service(web::resource("/v1/things").route(web::post().to(things::post)));
     }
 }

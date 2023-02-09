@@ -13,6 +13,7 @@ env = { path = "../../../../../../Rafael/rust/ruskit/env" }
 logging = { path = "../../../../../../Rafael/rust/ruskit/logging"  }
 httpw = { path = "../../../../../../Rafael/rust/ruskit/httpw" }
 traces = { path = "../../../../../../Rafael/rust/ruskit/traces"  }
+auth = { path = "../../../../../../Rafael/rust/ruskit/auth"  }
 
 actix-web = { version = "4.3.0" }
 serde = { version = "1.0.152", features = ["derive"] }
