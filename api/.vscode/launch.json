@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "webapi",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=webapi",
+          "--package=webapi"
+        ],
+        "filter": {
+          "name": "webapi",
+          "kind": "bin"
+        },
+      },
+      "env": {
+        "RUST_ENV": "local",
+        "APP_NAME": "api",
+      },
+      "args": [],
+      // "program": "./api",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole"
+    },
+  ]
+}

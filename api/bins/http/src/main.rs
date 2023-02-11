@@ -1,6 +1,7 @@
 mod controllers;
 mod routes;
 
+use auth::jwt_manager::auth0::Auth0JwtManager;
 use env::{ConfigBuilder, Configs, Empty};
 use httpw::server::HttpwServerImpl;
 use std::error::Error;
@@ -9,9 +10,12 @@ use std::error::Error;
 async fn main() -> Result<(), Box<dyn Error>> {
     let cfg = default_setup().await?;
 
+    let jwt = Auth0JwtManager::new();
+
     let server = HttpwServerImpl::new(&cfg.app)
         .register(routes::things_routes())
-        .register(routes::users_routes());
+        .register(routes::users_routes())
+        .jwt_manager(jwt);
 
     server.start().await?;
 
