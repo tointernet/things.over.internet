@@ -4,3 +4,16 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+
+env = { path = "../../../../../../Rafael/rust/ruskit/env" }
+errors = { path = "../../../../../../Rafael/rust/ruskit/errors"  }
+logging = { path = "../../../../../../Rafael/rust/ruskit/logging"  }
+traces = { path = "../../../../../../Rafael/rust/ruskit/traces"  }
+metrics = { path = "../../../../../../Rafael/rust/ruskit/metrics"  }
+amqp = { path = "../../../../../../Rafael/rust/ruskit/amqp"  }
+health-readiness = { path = "../../../../../../Rafael/rust/ruskit/health_readiness"  }
+
+tokio = { version = "1.24.1", features = ["rt-multi-thread", "macros"] }
+tracing = { version = "0.1.37" }
+opentelemetry = { version = "0.18.0" }
+async-trait = { version = "0.1.61" }
