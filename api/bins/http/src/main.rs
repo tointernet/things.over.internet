@@ -10,7 +10,7 @@ use std::error::Error;
 async fn main() -> Result<(), Box<dyn Error>> {
     let cfg = default_setup().await?;
 
-    let jwt = Auth0JwtManager::new();
+    let jwt = Auth0JwtManager::new(&cfg.app);
 
     let server = HttpwServerImpl::new(&cfg.app)
         .register(routes::things_routes())
