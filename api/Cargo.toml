@@ -3,11 +3,9 @@
 members = [
   "app",
   "infra",
-  "bins/http",
+  "bins/webapi",
 ]
 
 default-members  = [
-  "app",
-  "infra",
-  "bins/http",
+  "bins/webapi",
 ]
