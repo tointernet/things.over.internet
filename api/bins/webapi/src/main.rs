@@ -5,6 +5,22 @@ use auth::jwt_manager::auth0::Auth0JwtManager;
 use env::{ConfigBuilder, Configs, Empty};
 use httpw::server::HttpwServerImpl;
 use std::error::Error;
+use utoipa::OpenApi;
+
+#[derive(OpenApi)]
+#[openapi(
+        paths(
+            controllers::things::post,
+        ),
+        components(
+            schemas(controllers::things::Thing)
+        ),
+        tags(
+            (name = "todo", description = "Todo management endpoints.")
+        ),
+        // modifiers(&SecurityAddon)
+    )]
+struct ApiDoc;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {
