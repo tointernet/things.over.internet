@@ -1,26 +1,14 @@
 mod controllers;
+mod openapi;
 mod routes;
+mod viewmodels;
 
 use auth::jwt_manager::auth0::Auth0JwtManager;
 use env::{ConfigBuilder, Configs, Empty};
 use httpw::server::HttpwServerImpl;
+use openapi::ApiDoc;
 use std::error::Error;
 use utoipa::OpenApi;
-
-#[derive(OpenApi)]
-#[openapi(
-        paths(
-            controllers::things::post,
-        ),
-        components(
-            schemas(controllers::things::Thing)
-        ),
-        tags(
-            (name = "todo", description = "Todo management endpoints.")
-        ),
-        // modifiers(&SecurityAddon)
-    )]
-struct ApiDoc;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {
@@ -28,10 +16,13 @@ async fn main() -> Result<(), Box<dyn Error>> {
 
     let jwt = Auth0JwtManager::new(&cfg.app);
 
+    let doc = ApiDoc::openapi();
+
     let server = HttpwServerImpl::new(&cfg.app)
         .register(routes::things_routes())
         .register(routes::users_routes())
-        .jwt_manager(jwt);
+        .jwt_manager(jwt)
+        .openapi(&doc);
 
     server.start().await?;
 

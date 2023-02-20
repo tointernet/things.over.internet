@@ -1,28 +1,30 @@
+use crate::viewmodels::DelayedThingsRequest;
 use actix_web::{delete, get, post, web::Json, HttpRequest, HttpResponse, Responder};
 use httpw::extractors::JwtAuthenticateExtractor;
-use serde::{Deserialize, Serialize};
-use utoipa::ToSchema;
 
-#[derive(Serialize, Deserialize, ToSchema)]
-struct Info {}
-
-#[derive(Serialize, Deserialize, ToSchema)]
-pub struct Thing {}
-
-/// Create a new thing.
+/// Delead Request to create a new Thing.
 ///
-/// Post a new `Thing` in request body as json. Api will return
-/// accepted `Thing` on success or `ErrorResponse::Conflict` if todo with same id already exists.
+/// Things creation is a time consuming process because of that this endpoint will receive the request and will process asynchronously.
+/// If the request was registered correctly this endpoint will return 202 Accepted and 4xx/5xx if some error occur.
 ///
 #[utoipa::path(
-    request_body = Thing,
+    request_body = DelayedThingsRequest,
     responses(
-        (status = 202, description = "Thing requested successfully", body = Thing),
-        (status = 409, description = "Thing conflict", body = ErrorResponse)
+        (status = 202, description = "Thing requested successfully", body = DelayedThingsResponse),
+        (status = 400, description = "Bad request", body = HttpErrorViewModel),
+        (status = 401, description = "Unauthorized", body = HttpErrorViewModel),
+        (status = 403, description = "Forbidden", body = HttpErrorViewModel),
+        (status = 500, description = "Internal error", body = HttpErrorViewModel)
+    ),
+    security(
+        ("auth0" = [])
     )
 )]
 #[post("/")]
-pub async fn post(_thing: Json<Thing>, _auth: JwtAuthenticateExtractor) -> impl Responder {
+pub async fn post(
+    _thing: Json<DelayedThingsRequest>,
+    _auth: JwtAuthenticateExtractor,
+) -> impl Responder {
     HttpResponse::Ok().body("post::things")
 }
 
